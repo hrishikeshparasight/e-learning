@@ -1,0 +1,235 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* Variables */
+:root {
+  /* Fonts */
+  --headings: "Poppins", sans-serif;
+  --body: "Poppins", sans-serif;
+  --logo: "Bebas Neue", sans-serif;
+
+  /* Colors */
+  --primary: #057b6c;
+  --secondary: #ed9365;
+  --bg-primary: #edf8fa;
+  --black: #1e1e1e;
+  --dark-alt: #6c6c6c;
+  --light: #fff;
+  --light-alt: #f5f4ff;
+  --white: #ffffff;
+  --bg-white: #ffffff;
+  --text-colour: #403f3f;
+  /* Filter */
+  --filter: invert(62%) sepia(89%) saturate(390%) hue-rotate(325deg)
+    brightness(96%) contrast(93%);
+  --filter2: invert(36%) sepia(13%) saturate(4724%) hue-rotate(134deg)
+    brightness(92%) contrast(96%);
+  /* Shadow */
+  --shadow: 0px 4px 20px 0px #ccc7ff;
+}
+
+/* Default */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-color: var(--primary) transparent;
+  scrollbar-width: thin;
+}
+
+*::selection {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--body);
+  background: var(--white);
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+b,
+i,
+u,
+ul,
+ol,
+li,
+span {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img,
+video {
+  width: 100%;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--dark);
+  line-height: 160%;
+  /* margin: 0 !important; */
+  letter-spacing: 0.5px;
+  font-family: var(--para);
+}
+
+p a {
+  color: var(--primary);
+  transition: 0.5s ease all;
+}
+
+p a:hover {
+  color: var(--secondary);
+}
+
+/* Background */
+.bg-primary {
+  background: var(--primary) !important;
+}
+
+.bg-secondary {
+  background: var(--secondary) !important;
+}
+
+.bg-light {
+  background: var(--white) !important;
+}
+
+.bg-light-alt {
+  background: var(--light-alt) !important;
+}
+
+.bg-dark {
+  background: var(--dark) !important;
+}
+
+.bg-dark-alt {
+  background: var(--dark-alt) !important;
+}
+
+.bg-black {
+  background: var(--black) !important;
+}
+
+/* Color */
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.text-secondary {
+  color: var(--secondary) !important;
+}
+
+/* Section */
+.section {
+  width: 100%;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section .container,
+.section .container-fluid {
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1360px;
+  }
+}
+
+.container-1300 {
+  max-width: 1300px;
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  padding: 10px 25px;
+  outline: 0;
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  font-family: var(--para);
+  font-size: 16px;
+  color: var(--light);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+.button:hover {
+  border: 1px solid var(--primary);
+  background-color: var(--light);
+  color: var(--primary);
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+/* Headings */
+.sub-heading {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: var(--headings);
+  margin-bottom: 15px;
+  /* color: var(--primary); */
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: 550;
+  color: var(--black);
+  font-family: var(--headings);
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 36px !important;
+  }
+
+  .section {
+    padding: 60px 0 !important;
+  }
+}
+
